@@ -600,25 +600,3 @@ exit:
   mov rsp, rbp
   pop rbp
   ret
-
-putOnStack:
-
-  push rbx
-  push rax
-  push rdi
-  push rsi
-  push rdx
-  push rcx
-  push r11
-  ret
-
-popOfStack:
-
-  pop r11
-  pop rcx
-  pop rdx
-  pop rsi
-  pop rdi
-  pop rax
-  pop rbx
-  ret
