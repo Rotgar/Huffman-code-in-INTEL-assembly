@@ -289,12 +289,12 @@
     jmp loopDecodingText
 
   beforeCheck:
-    ; Here we check if too many characters were sotred in decoded text.
+    ; Here we check if too many characters were stored in decoded text.
     ; It can happen if last encoded byte was full of 0's and a character
     ; can be coded as such. The newSpace is at the end always. It may be
-    ; coded as 00100 for example and sotred in encoded text on last two
+    ; coded as 00100 for example and stored in encoded text on two last
     ; bytes for example xxxx0010 00000000 - one 0 must be placed on
-    ; an extra last byte, and the rest of it is filled with 0.
+    ; an extra last byte, and the rest of it is filled with 0's.
     ; A character which is coded as 0's, would be stored at the end of
     ; decoded text then. Here we check if such situation occured, and
     ; decrease the text length for all unwanted characters.
